@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>User Data Page</h1>
+        <% if(user == null){ %>
+            <form action = "/userDataPage/addUser" method= "POST">
+                username: <input type = "text" name = "username"></br>
+                password: <input type = "text" name = "pwd"></br>
+                <input type="submit" value = "Save">
+            </form>
+        <% } else {%>
+            <form action = "/update/<%= user.username %>" method= "POST">
+                username: <input type = "text" name = "username" value = <%= user.username %>></br>
+                password: <input type = "text" name = "pwd"  value = <%= user.pwd %>></br>
+                <input type = "submit" value = "Update">
+            </form>
+        <% } %>
+
+    </body>
+</html>

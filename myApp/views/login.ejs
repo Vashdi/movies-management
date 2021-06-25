@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h3>Login Page</h3>
+        <form action = "/menu" method= "POST">
+            username: <input type = "text" name = "username"></br>
+            password: <input type = "text" name = "pwd"></br>
+            <input type="submit" value="Login">
+            
+            <% if(msg != " ") {%></br></br>
+                <%= msg %>
+                <% }%>
+        </form>
+    </body>
+</html>

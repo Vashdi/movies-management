@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <form action = "/searchMoviesPage" method= "POST">
+            movie name: <input type = "text" name = "name"> </br>
+            genre: <select name = "genre">
+                <% var genres = ["genre","Drama","Science-Fiction","Thriller","Action","Crime","Horror","Romance"]; %>
+                <% for(var i = 0; i <= genres.length - 1; i++) { %>
+                  <option value='<%= genres[i] %>'><%= genres[i] %></option>
+                <% } %> 
+            </select></br>
+            language: <select name = "language">
+                <% var languages = ["language","English","Hebrew","French","Japanese","Dutch","Arabic"]; %>
+                <% for(var i = 0; i <= languages.length - 1; i++) { %>
+                  <option value='<%= languages[i] %>'><%= languages[i] %></option>
+                <% } %> 
+            </select></br>
+            <input type = "submit" value = "search">
+        </form>
+    </body>
+</html>

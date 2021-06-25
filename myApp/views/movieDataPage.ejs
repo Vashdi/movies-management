@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <table border = "2">
+        <% movies.forEach(movie => {%>
+           <tr>
+            <td>
+                <a href = "/movieDataPage/<%= movie.name%>"><%= movie.name %></a> </br>
+            </td>
+            <td>
+                <% movie.genres.forEach(genre => { %>
+                    <% allOurMovies.forEach(movie => { %>
+                        <% if(movie.genres.includes(genre)){ %>
+                            <a href="/movieDataPage/<%= movie.name%>"> <%= movie.name %></a> </br>
+                        <% } %>
+                    <%}) %>    
+                <% })%>
+            </td>
+        </tr>
+        <% })%>
+        </table>
+        <a href="/AdminMenu"> back </a>
+    </body>
+</html>
